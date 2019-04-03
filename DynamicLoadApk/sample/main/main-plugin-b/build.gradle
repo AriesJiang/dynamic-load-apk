@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 19
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -38,8 +38,8 @@ dependencies {
     provided files('../main-host/build/libs/main-host.jar')
 }
 
-task beforeBuild(dependsOn: ':main-host:buildLib') << {
-    println 'do it before build'
-}
-
-preBuild.dependsOn beforeBuild
+//task beforeBuild(dependsOn: ':main-host:buildLib') << {
+//    println 'do it before build'
+//}
+//
+//preBuild.dependsOn beforeBuild
